@@ -68,6 +68,7 @@ for (let eachendorsementArray of endorsementObjectToArray){
 
   
   let list=""
+  let listGroup=""
     
   for (let endorsement of endorsements){
   
@@ -85,9 +86,10 @@ for (let eachendorsementArray of endorsementObjectToArray){
    </div>
    `
    }
-   
-   
-   endorsementContainer.innerHTML += list 
+      
+   listGroup += list
+    
+   endorsementContainer.innerHTML = listGroup
    
  } 
  
