@@ -18,7 +18,6 @@ const endorsementMessage = document.getElementById("endorsementmessage")
 const endorsementSender = document.getElementById("sender")
 const endorsementRecipient = document.getElementById("recipient")
 const endorsementContainer = document.getElementById("endorsementcontainer")
-let newEndorsementObject = {}
 let endorsementObjectToArray = []
 
 
@@ -31,11 +30,10 @@ document.addEventListener("click",function(e){
 
 
 
-
+let newEndorsementObject = {}
 function addNewMessageToEndorsementArray(){
 
-
- newEndorsementObject= {
+  newEndorsementObject= {
     sender : `${endorsementSender.value}`,
     message : `${endorsementMessage.value}`,
     recipient : `${endorsementRecipient.value}`,
@@ -56,13 +54,9 @@ endorsementObjectToArray = Object.entries(snapshot.val())
 
  
 for (let eachendorsementArray of endorsementObjectToArray){
-  renderEndorsementToEndorsementContainer(eachendorsementArray)
+  renderEndorsementToEndorsementContainer(eachendorsementArray) 
 }
-
-
-
  })
-
 
 
 
